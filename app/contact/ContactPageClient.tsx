@@ -9,7 +9,14 @@ import * as z from "zod"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form"
 import { toast } from "@/components/ui/use-toast"
 
 const formSchema = z.object({
@@ -91,20 +98,21 @@ export default function ContactPageClient() {
                   <h3 className="font-medium">Адрес</h3>
                   <p className="text-muted-foreground">Улица Гладстон №90</p>
                   <p className="text-muted-foreground">Пловдив, 4000</p>
-
-                
-                  <div className="rounded-xl overflow-hidden mt-4">
-                    <iframe
-                      src="https://www.google.com/maps?q=ул.+Гладстон+90,+Пловдив&output=embed"
-                      width="100%"
-                      height="300"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                  </div>
                 </div>
+              </div>
+
+              {/* Карта Google Maps */}
+              <div className="mt-6 rounded-xl overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="300"
+                  frameBorder="0"
+                  style={{ border: 0 }}
+                  src={`https://www.google.com/maps/embed/v1/place?q=ул.+Гладстон+90,+Пловдив&key=AIzaSyBXlvDnYEQENkWDKqEiHNYbZuo4bRbJPug`}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           </div>
