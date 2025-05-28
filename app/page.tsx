@@ -64,35 +64,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Featured Categories */}
-      <section className="w-full py-12 md:py-24 bg-white">
-        <div className="container px-4 md:px-6">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Категории</h2>
-            <p className="max-w-[700px] mx-auto text-gray-500 md:text-xl">
-              Разгледай последните колекции от Християнски дрехи
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-8">
-            {categories.slice(0, 4).map((category) => (
-              <Link key={category.id} href={`/category/${category.slug}`}>
-                <div className="group relative overflow-hidden rounded-lg shadow-sm">
-                  <div className="aspect-square w-full overflow-hidden bg-gray-100">
-                    <img
-                      src={`/placeholder.svg?height=400&width=400&text=${category.name}`}
-                      alt={category.name}
-                      className="object-cover w-full h-full transition-transform group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-4">
-                    <h3 className="text-xl font-medium text-white">{category.name}</h3>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Trending Products */}
       <section className="w-full py-12 md:py-24 bg-gray-50">
