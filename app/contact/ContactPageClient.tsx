@@ -58,21 +58,21 @@ export default function ContactPageClient() {
   return (
     <div className="container max-w-6xl py-12 px-4 md:px-6">
       <div className="text-center space-y-4 mb-12">
-        <h1 className="text-4xl font-bold tracking-tight">Contact Us</h1>
+        <h1 className="text-4xl font-bold tracking-tight">Свържете се с нас</h1>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Have questions or feedback? We'd love to hear from you. Our team is always here to help.
+          Имате въпроси? Екипът ни е тук за да помогне.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>
           <div className="bg-muted rounded-xl p-8 mb-8">
-            <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
+            <h2 className="text-2xl font-bold mb-6">Контакти</h2>
             <div className="space-y-6">
               <div className="flex items-start">
                 <Mail className="h-6 w-6 mr-4 text-primary" />
                 <div>
-                  <h3 className="font-medium">Email</h3>
+                  <h3 className="font-medium">Имейл</h3>
                   <p className="text-muted-foreground">support@DivineGlo.com</p>
                   <p className="text-muted-foreground">info@DivineGlo.com</p>
                 </div>
@@ -80,43 +80,43 @@ export default function ContactPageClient() {
               <div className="flex items-start">
                 <Phone className="h-6 w-6 mr-4 text-primary" />
                 <div>
-                  <h3 className="font-medium">Phone</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                  <p className="text-muted-foreground">Mon-Fri: 9am-6pm EST</p>
+                  <h3 className="font-medium">Телефон</h3>
+                  <p className="text-muted-foreground">0897242005</p>
+                  <p className="text-muted-foreground">Понеделник-Петък: 9:00 - 18:00</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-6 w-6 mr-4 text-primary" />
                 <div>
-                  <h3 className="font-medium">Address</h3>
-                  <p className="text-muted-foreground">123 Fashion Street</p>
-                  <p className="text-muted-foreground">New York, NY 10001</p>
+                  <h3 className="font-medium">Адрес</h3>
+                  <p className="text-muted-foreground">Улица Гладстон №90</p>
+                  <p className="text-muted-foreground">Пловдив, 4000</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="bg-muted rounded-xl p-8">
-            <h2 className="text-2xl font-bold mb-6">Store Hours</h2>
+            <h2 className="text-2xl font-bold mb-6">Работни часове</h2>
             <div className="space-y-2">
               <div className="flex justify-between">
-                <span>Monday - Friday</span>
-                <span>10:00 AM - 9:00 PM</span>
+                <span>Понеделник - Петък</span>
+                <span>9:00 - 18:00</span>
               </div>
               <div className="flex justify-between">
-                <span>Saturday</span>
-                <span>10:00 AM - 8:00 PM</span>
+                <span>Събота</span>
+                <span>10:00 - 16:00</span>
               </div>
               <div className="flex justify-between">
-                <span>Sunday</span>
-                <span>11:00 AM - 6:00 PM</span>
+                <span>Неделя</span>
+                <span>Почивен ден</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="bg-muted rounded-xl p-8">
-          <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+          <h2 className="text-2xl font-bold mb-6">Изпрати ни съобщение</h2>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <FormField
@@ -124,9 +124,9 @@ export default function ContactPageClient() {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>Име</FormLabel>
                     <FormControl>
-                      <Input placeholder="Your name" {...field} />
+                      <Input placeholder="Име" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -137,9 +137,9 @@ export default function ContactPageClient() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>Имейл</FormLabel>
                     <FormControl>
-                      <Input placeholder="Your email address" {...field} />
+                      <Input placeholder="Имейл" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -150,9 +150,9 @@ export default function ContactPageClient() {
                 name="subject"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Subject</FormLabel>
+                    <FormLabel>Тема</FormLabel>
                     <FormControl>
-                      <Input placeholder="What is this regarding?" {...field} />
+                      <Input placeholder="Какво относно?" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -163,9 +163,9 @@ export default function ContactPageClient() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel>Съобщение</FormLabel>
                     <FormControl>
-                      <Textarea placeholder="Your message" className="min-h-[150px]" {...field} />
+                      <Textarea placeholder="Вашето съобщение" className="min-h-[150px]" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -173,10 +173,10 @@ export default function ContactPageClient() {
               />
               <Button type="submit" className="w-full" disabled={isSubmitting}>
                 {isSubmitting ? (
-                  <>Processing...</>
+                  <>Зареждане...</>
                 ) : (
                   <>
-                    <Send className="mr-2 h-4 w-4" /> Send Message
+                    <Send className="mr-2 h-4 w-4" /> Изпрати съобщение
                   </>
                 )}
               </Button>
