@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Terms of Service | DivineGlo",
-  description: "DivineGlo's terms of service and conditions of use.",
+  title: "Условия за ползване | DivineGlo",
+  description: "Условия за ползване и условия на DivineGlo.",
 }
 
 export default function TermsOfServicePage() {
@@ -16,94 +16,95 @@ export default function TermsOfServicePage() {
 
         <div className="prose prose-slate dark:prose-invert max-w-none">
           <p>
-            Welcome to DivineGlo. These Terms of Service ("Terms") govern your use of our website, products, and
-            services. By accessing or using DivineGlo, you agree to be bound by these Terms.
+            Добре дошли в DivineGlo. Тези Условия за ползване („Условия“) уреждат използването на нашия уебсайт, продукти и
+            услуги. Чрез достъпа до или използването на DivineGlo вие се съгласявате да бъдете обвързани с тези Условия.
           </p>
 
-          <h2>1. Acceptance of Terms</h2>
+          <h2>1. Приемане на условията</h2>
           <p>
-            By accessing or using our website, you agree to be bound by these Terms and our Privacy Policy. If you do
-            not agree to these Terms, please do not use our services.
+            Чрез достъпа или използването на нашия уебсайт вие се съгласявате да бъдете обвързани с тези Условия и нашата Политика за поверителност. Ако го направите
+            не сте съгласни с тези Условия, моля, не използвайте нашите услуги.
           </p>
 
-          <h2>2. Changes to Terms</h2>
+          <h2>2. Промени в условията</h2>
           <p>
-            We reserve the right to modify these Terms at any time. We will provide notice of any material changes by
-            updating the "Last Updated" date at the top of this page. Your continued use of our services after such
-            modifications will constitute your acknowledgment of the modified Terms.
+            Ние си запазваме правото да променяме тези Условия по всяко време. Ще предоставим известие за всякакви съществени промени до
+            актуализиране на датата „Последна актуализация“ в горната част на тази страница. Вашето продължаващо използване на нашите услуги след такова
+            промените ще представляват вашето потвърждение за променените Условия.
           </p>
 
-          <h2>3. User Accounts</h2>
+          <h2>3. 
+Потребителски акаунти</h2>
           <p>
-            When you create an account with us, you must provide accurate, complete, and current information. You are
-            responsible for safeguarding your password and for all activities that occur under your account. Notify us
-            immediately of any unauthorized use of your account.
+            Когато създавате акаунт при нас, трябва да предоставите точна, пълна и актуална информация. Вие сте
+            отговорен за защитата на вашата парола и за всички дейности, които се извършват под вашия акаунт. Уведомете ни
+            незабавно при всяко неразрешено използване на вашия акаунт.
           </p>
 
-          <h2>4. Products and Orders</h2>
+          <h2>4. Продукти и поръчки</h2>
           <p>
-            All product descriptions, including pricing and availability, are subject to change without notice. We
-            reserve the right to limit quantities, reject, or cancel orders at our discretion.
+            Всички описания на продуктите, включително цени и наличност, подлежат на промяна без предизвестие. Ние
+            си запазваме правото да ограничаваме количествата, да отхвърляме или анулираме поръчки по наше усмотрение.
           </p>
 
-          <h2>5. Payment Terms</h2>
+          <h2>5. Плащане</h2>
           <p>
-            By providing a payment method, you represent that you are authorized to use the designated payment method.
-            You agree to pay all charges at the prices then in effect for your purchases and any applicable shipping
-            fees.
+            Предоставяйки метод на плащане, вие декларирате, че сте упълномощени да използвате определения метод на плащане.
+            Вие се съгласявате да заплатите всички такси по цените, които са в сила към момента за вашите покупки и всяка приложима доставка
+            такси.
           </p>
 
-          <h2>6. Shipping and Delivery</h2>
+          <h2>6. Доставка</h2>
           <p>
-            Shipping times are estimates and not guaranteed. We are not responsible for delays caused by carriers,
-            customs, or other factors outside our control. Please refer to our Shipping Policy for more details.
+            Времената за доставка са приблизителни и не са гарантирани. Ние не носим отговорност за закъснения, причинени от превозвачи,
+            митници или други фактори извън нашия контрол. Моля, вижте нашата политика за доставка за 
           </p>
 
-          <h2>7. Returns and Refunds</h2>
+          <h2>7. Връщане и възстановяване на средства</h2>
           <p>
-            Please refer to our Return Policy for information about returns, exchanges, and refunds. Certain items may
-            be ineligible for return or exchange.
+           Моля, вижте нашата Политика за връщане за информация относно връщане, замяна и възстановяване на суми. Някои елементи могат
+            не отговаря на условията за връщане или замяна.
           </p>
 
-          <h2>8. Intellectual Property</h2>
+          <h2>8.Интелектуална собственост</h2>
           <p>
-            All content on our website, including text, graphics, logos, images, and software, is the property of
-            DivineGlo and is protected by copyright, trademark, and other intellectual property laws.
+            Цялото съдържание на нашия уебсайт, включително текст, графики, лога, изображения и софтуер, е собственост на
+            DivineGlo и е защитен от законите за авторското право, търговската марка и други закони за интелектуална собственост.
           </p>
 
-          <h2>9. User Content</h2>
+          <h2>9. Потребителско съдържание</h2>
           <p>
-            By submitting content to our website (such as reviews or comments), you grant us a non-exclusive,
-            royalty-free, perpetual, irrevocable right to use, reproduce, modify, adapt, publish, translate, create
-            derivative works from, distribute, and display such content worldwide.
+            Изпращайки съдържание на нашия уебсайт (като прегледи или коментари), вие ни предоставяте неизключително,
+            безвъзмездно, вечно, неотменимо право за използване, възпроизвеждане, промяна, адаптиране, публикуване, превод, създаване
+            производни произведения от, разпространяват и показват такова съдържание по целия свят.
           </p>
 
-          <h2>10. Prohibited Activities</h2>
+          <h2>10. Забранени дейности</h2>
           <p>
-            You agree not to engage in any activity that interferes with or disrupts our services, attempts to access
-            data not intended for you, or otherwise violates any laws or regulations.
+           Вие се съгласявате да не участвате в никаква дейност, която пречи или нарушава нашите услуги, опити за достъп
+            данни, които не са предназначени за вас, или по друг начин нарушават закони или разпоредби.
           </p>
 
-          <h2>11. Disclaimer of Warranties</h2>
+          <h2>11. Отказ от граници</h2>
           <p>
-            Our services are provided "as is" without any warranties, expressed or implied. We do not guarantee that our
-            services will be error-free or uninterrupted.
+            Нашите услуги се предоставят „както са“ без никакви гаранции, изрични или подразбиращи се. Ние не гарантираме, че нашите
+            услугите ще бъдат без грешки или без прекъсвания.
           </p>
 
-          <h2>12. Limitation of Liability</h2>
+          <h2>12. Ограничение на отговорността</h2>
           <p>
-            In no event shall DivineGlo be liable for any indirect, incidental, special, consequential, or punitive
-            damages arising out of or related to your use of our services.
+            В никакъв случай DivineGlo не носи отговорност за каквито и да е косвени, случайни, специални, последващи или наказателни
+            щети, произтичащи от или свързани с използването на нашите услуги от ваша страна.
           </p>
 
-          <h2>13. Governing Law</h2>
+          <h2>13. Приложим закон</h2>
           <p>
-            These Terms shall be governed by and construed in accordance with the laws of the state of New York, without
-            regard to its conflict of law provisions.
+            Тези Условия се управляват и тълкуват в съответствие със законите на щата Ню Йорк, без
+            по отношение на неговите стълкновителни разпоредби.
           </p>
 
-          <h2>14. Contact Information</h2>
-          <p>For questions about these Terms, please contact us at legal@DivineGlo.com.</p>
+          <h2>14. Контакти</h2>
+          <p>За въпроси относно тези Условия, моля, свържете се с нас на legal@DivineGlo.com.</p>
         </div>
       </div>
     </div>

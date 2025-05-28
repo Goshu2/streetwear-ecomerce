@@ -37,21 +37,21 @@ export default function AccountProfile() {
     setSuccess(false)
 
     if (!name.trim()) {
-      setError("Name is required")
+      setError("Името е задължително.")
       return
     }
 
     setLoading(true)
 
     try {
-      // Update Firebase Auth profile
+      // Обновяване на профила във Firebase Auth
       if (auth.currentUser) {
         await updateFirebaseProfile(auth.currentUser, {
           displayName: name,
         })
       }
 
-      // Update Firestore user document
+      // Обновяване на документа в Firestore
       if (user?.uid) {
         await updateDoc(doc(db, "users", user.uid), {
           name,
@@ -60,18 +60,18 @@ export default function AccountProfile() {
       }
 
       toast({
-        title: "Profile updated",
-        description: "Your profile has been updated successfully.",
+        title: "Профилът е обновен",
+        description: "Вашият профил беше успешно обновен.",
       })
 
       setSuccess(true)
     } catch (error) {
-      console.error("Error updating profile:", error)
-      setError("Failed to update profile. Please try again.")
+      console.error("Грешка при обновяване на профила:", error)
+      setError("Неуспешно обновяване на профила. Моля, опитайте отново.")
 
       toast({
-        title: "Update failed",
-        description: "There was an error updating your profile. Please try again.",
+        title: "Грешка при обновяване",
+        description: "Възникна грешка при обновяване на вашия профил. Моля, опитайте отново.",
         variant: "destructive",
       })
     } finally {
@@ -82,8 +82,8 @@ export default function AccountProfile() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Profile Information</CardTitle>
-        <CardDescription>Update your account profile information</CardDescription>
+        <CardTitle>Информация за профила</CardTitle>
+        <CardDescription>Обновете информацията за вашия акаунт</CardDescription>
       </CardHeader>
 
       {error && (
@@ -97,7 +97,7 @@ export default function AccountProfile() {
       {success && (
         <div className="px-6">
           <Alert className="mb-4 bg-green-50 border-green-200">
-            <AlertDescription className="text-green-800">Your profile has been updated successfully.</AlertDescription>
+            <AlertDescription className="text-green-800">Вашият профил беше успешно обновен.</AlertDescription>
           </Alert>
         </div>
       )}
@@ -105,14 +105,14 @@ export default function AccountProfile() {
       <form onSubmit={handleSubmit}>
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="name">Full Name</Label>
+            <Label htmlFor="name">Пълно име</Label>
             <Input id="name" value={name} onChange={(e) => setName(e.target.value)} required disabled={loading} />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">Имейл</Label>
             <Input id="email" type="email" value={email} disabled={true} className="bg-muted" />
             <p className="text-xs text-muted-foreground">
-              Email cannot be changed. Contact support if you need to update your email address.
+              Имейл адресът не може да бъде променен. Свържете се с поддръжката, ако желаете да го актуализирате.
             </p>
           </div>
         </CardContent>
@@ -121,10 +121,10 @@ export default function AccountProfile() {
             {loading ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Saving...
+                Запазване...
               </>
             ) : (
-              "Save Changes"
+              "Запази промените"
             )}
           </Button>
         </CardFooter>

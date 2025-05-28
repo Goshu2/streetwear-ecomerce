@@ -22,33 +22,33 @@ export default function AccountPage() {
           <aside className="md:w-64">
             <Card>
               <CardHeader>
-                <CardTitle>Account</CardTitle>
-                <CardDescription>Manage your account settings</CardDescription>
+                <CardTitle>Акаунт</CardTitle>
+                <CardDescription>Управление на настройките на акаунта</CardDescription>
               </CardHeader>
               <CardContent className="p-0">
                 <nav className="flex flex-col space-y-1 px-2">
                   <Link href="/account">
                     <Button variant="ghost" className="w-full justify-start">
                       <User className="mr-2 h-4 w-4" />
-                      Profile
+                      Профил
                     </Button>
                   </Link>
                   <Link href="/account/orders">
                     <Button variant="ghost" className="w-full justify-start">
                       <Package className="mr-2 h-4 w-4" />
-                      Orders
+                      Поръчки
                     </Button>
                   </Link>
                   <Link href="/account/addresses">
                     <Button variant="ghost" className="w-full justify-start">
                       <CreditCard className="mr-2 h-4 w-4" />
-                      Addresses
+                      Адреси
                     </Button>
                   </Link>
                   <Link href="/account/payment-methods">
                     <Button variant="ghost" className="w-full justify-start">
                       <Settings className="mr-2 h-4 w-4" />
-                      Payment Methods
+                      Метод на плащане
                     </Button>
                   </Link>
                 </nav>
@@ -56,7 +56,7 @@ export default function AccountPage() {
               <CardFooter>
                 <Button variant="outline" className="w-full" onClick={signOut}>
                   <LogOut className="mr-2 h-4 w-4" />
-                  Sign Out
+                  Изход
                 </Button>
               </CardFooter>
             </Card>
@@ -65,10 +65,10 @@ export default function AccountPage() {
           <div className="flex-1">
             <Tabs defaultValue="profile">
               <TabsList className="grid w-full grid-cols-4">
-                <TabsTrigger value="profile">Profile</TabsTrigger>
-                <TabsTrigger value="orders">Orders</TabsTrigger>
-                <TabsTrigger value="addresses">Addresses</TabsTrigger>
-                <TabsTrigger value="payment">Payment</TabsTrigger>
+                <TabsTrigger value="profile">Профил</TabsTrigger>
+                <TabsTrigger value="orders">Поръчки</TabsTrigger>
+                <TabsTrigger value="addresses">Адреси</TabsTrigger>
+                <TabsTrigger value="payment">Плащане</TabsTrigger>
               </TabsList>
               <TabsContent value="profile" className="pt-6">
                 <AccountProfile />
