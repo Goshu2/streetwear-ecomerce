@@ -9,14 +9,7 @@ import * as z from "zod"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { toast } from "@/components/ui/use-toast"
 
 const formSchema = z.object({
@@ -50,6 +43,7 @@ export default function ContactPageClient() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
 
+    // Simulate API call
     setTimeout(() => {
       console.log(values)
       setIsSubmitting(false)
@@ -97,16 +91,18 @@ export default function ContactPageClient() {
                   <h3 className="font-medium">Адрес</h3>
                   <p className="text-muted-foreground">Улица Гладстон №90</p>
                   <p className="text-muted-foreground">Пловдив, 4000</p>
-                  <div className="mt-4 rounded-lg overflow-hidden">
+
+                
+                  <div className="rounded-xl overflow-hidden mt-4">
                     <iframe
-                      src="https://maps.app.goo.gl/e5FVZEw1227TXfyx6"
+                      src="https://www.google.com/maps?q=ул.+Гладстон+90,+Пловдив&output=embed"
                       width="100%"
-                      height="250"
+                      height="300"
                       style={{ border: 0 }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                    />
+                    ></iframe>
                   </div>
                 </div>
               </div>
@@ -182,11 +178,7 @@ export default function ContactPageClient() {
                   <FormItem>
                     <FormLabel>Съобщение</FormLabel>
                     <FormControl>
-                      <Textarea
-                        placeholder="Вашето съобщение"
-                        className="min-h-[150px]"
-                        {...field}
-                      />
+                      <Textarea placeholder="Вашето съобщение" className="min-h-[150px]" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
